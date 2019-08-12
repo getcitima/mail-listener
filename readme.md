@@ -2,7 +2,7 @@
 
 mail-listener library for node.js. Get notification when new email arrived to inbox or when message metadata (e.g. flags) changes externally. Uses IMAP protocol.
 
-We are using these libraries: [node-imap](https://github.com/mscdex/node-imap), [mailparser](https://github.com/andris9/mailparser).
+We are using these libraries: [node-imap](https://github.com/mscdex/node-imap), [mailparser](https://github.com/nodemailer/mailparser).
 
 Heavily inspired by [mail-listener2](https://github.com/chirag04/mail-listener2) and [mail-listener5](https://github.com/Pranav-Dakshina/mail-listener2).
 
@@ -16,9 +16,9 @@ Install
 
 ```javascript
 
-var MailListener = require('mail-listener');
+const MailListener = require('mail-listener');
 
-var mailListener = new MailListener({
+const mailListener = new MailListener({
   imapOptions: {
     username: 'imap-username',
     password: 'imap-password',
@@ -83,28 +83,12 @@ mailListener.imap.move(:msguids, :mailboxes);
 
 ```
 
-That's easy!
-
 ## Attachments
-Attachments in this version are buffered. This feature is based on how [mailparser](https://github.com/andris9/mailparser#attachments)'s simpleParser function handles attachments.
-Setting `attachments: true` will download attachments as buffer objects by default to the project directory.
+
+Setting `attachments: true` will download attachments as stream to the project directory.
 A specific download directory may be specified by setting `attachmentOptions: { directory: 'attachments/'}`.
 The `'attachment'` event will be fired every time an attachment is encountered.
-
-## Testing
-A test script is available at test.js. Before using the test script, it is necessary to set the following environment variables:
-
-- IMAPUSER - IMAP account username.
-- IMAPPASS - IMAP account password.
-- IMAPHOST - IMAP server hostname (e.g. imap.example.com).
-
-The test script assumes that the IMAP host supports TLS and that the port is the usual 993. These values can be changed in test.js if necessary.
-
-To run the test script, simply execute:
-
-```bash
-export IMAPUSER='user@example.com' IMAPPASS='password' IMAPHOST='imap.example.com'; node test.js
-```
+To customize the name of file downloaded specific a `customFilename` function.
 
 ## License
 
