@@ -1,37 +1,42 @@
 {
-  "name": "mail-listener5",
-  "version": "2.0.0",
+  "name": "@digital-garage-to/mail-listener",
+  "version": "0.0.0",
   "description": "Mail listener library for node.js. Get notification when new email arrived.",
-  "dependencies": {
-    "imap": "^0.8.19",
-    "mailparser": "^2.4.3",
-    "async": "^2.6.2"
+  "author": "Matteo Padovano <mrbatista@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digital-garage-to/mail-listener/issues"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/MatejMalicek/mail-listener2.git"
+    "url": "git://github.com/digital-garage-to/mail-listener/mail-listener.git"
   },
-  "homepage": "https://github.com/MatejMalicek/mail-listener2",
+  "homepage": "https://github.com/digital-garage-to/mail-listener",
   "keywords": [
     "mail",
     "job",
     "imap",
     "mail listener",
-    "mail listener2",
-    "mail listener3",
-    "mail listener4",
     "email",
     "email parser",
     "node imap",
     "mail parser"
   ],
-  "author": "Matej Malicek <matej@malicek.co>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MatejMalicek/mail-listener2/issues"
+  "dependencies": {
+    "async": "^2.6.2",
+    "imap": "^0.8.19",
+    "mailparser": "^2.4.3"
   },
-  "main": "index.js",
-  "scripts": {
-    "test": "test.js"
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-loopback": "^13.1.0",
+    "mocha": "^6.2.0"
   }
 }
