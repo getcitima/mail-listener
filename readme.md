@@ -37,8 +37,8 @@ const mailListener = new MailListener({
   attachments: true, // download attachments as they are encountered to the project directory
   attachmentOptions: {
     directory: 'attachments/', // specify a download directory for attachments
-    customFilename: (directory, attachment) => {
-      return `${directory}test/${attachment.filename}`;
+    customFilename: attachment => {
+      return 'test.zip';
     };
   }
 });
