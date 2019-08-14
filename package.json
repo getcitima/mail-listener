@@ -1,6 +1,6 @@
 {
-  "name": "@digital-garage-to/mail-listener",
-  "version": "0.0.0",
+  "name": "@digitalgarage/mail-listener",
+  "version": "1.0.0",
   "description": "Mail listener library for node.js. Get notification when new email arrived.",
   "author": "Matteo Padovano <mrbatista@users.noreply.github.com>",
   "license": "MIT",
@@ -38,5 +38,11 @@
     "eslint": "^6.1.0",
     "eslint-config-loopback": "^13.1.0",
     "mocha": "^6.2.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
