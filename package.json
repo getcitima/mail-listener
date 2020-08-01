@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "async": "^2.6.2",
-    "imap": "^0.8.19",
+    "imap": "github:matteomattei/node-imap",
     "mailparser": "^2.4.3"
   },
   "devDependencies": {
